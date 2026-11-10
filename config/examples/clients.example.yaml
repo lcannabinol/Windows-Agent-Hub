@@ -1,0 +1,17 @@
+clients:
+  claude_desktop:
+    transport: stdio
+    enabled: false
+    tool_groups: [desktop_read]
+  cursor:
+    transport: stdio
+    enabled: false
+    tool_groups: []
+  qwen_code:
+    transport: stdio
+    enabled: false
+    tool_groups: []
+  vscode_copilot:
+    transport: stdio
+    enabled: false
+    tool_groups: [google_cloud_read]

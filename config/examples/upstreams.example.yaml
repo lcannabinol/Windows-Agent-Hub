@@ -1,0 +1,11 @@
+upstreams:
+  desktop_commander:
+    transport: stdio
+    command: npx
+    args: ["-y", "@wonderwhy-er/desktop-commander@latest"]
+    enabled: false
+  google_data_cloud:
+    transport: existing_proxy
+    command: node
+    args: ["PATH_TO_EXISTING_mcp_proxy.js"]
+    enabled: false
