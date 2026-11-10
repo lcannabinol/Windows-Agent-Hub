@@ -1,26 +1,32 @@
 # Статус — 2026-11-10
 
 ## Выполнено
-- Восстановлены требования из недавних обсуждений.
-- Уточнена концепция: HUB — MCP bridge, не автономный агент.
-- Создан новый локальный каталог D:\LLM\Windows-Agent-Hub.
-- Созданы план, архитектура, ADR, профили клиентов, интеграционный план, инвентаризация и TODO для Copilot/Cursor/Qwen/Claude.
-- Существующий D:\mAgIcmd\github_worktree не изменялся.
+- Восстановлены требования пользователя из недавних обсуждений.
+- Зафиксировано главное решение: HUB — MCP bridge, не автономный агент.
+- Создан новый каталог D:\LLM\Windows-Agent-Hub.
+- Созданы PLAN.md, README, архитектура, ADR, профили клиентов, план интеграций и инвентаризация HOME-PC.
+- Созданы отдельные TODO для Copilot, Cursor, Qwen, Claude Desktop, ChatGPT, Gemini, VS Code/Copilot, Ui.Vision и Desktop Commander.
+- Добавлен .github/copilot-instructions.md.
+- Добавлен .gitignore для секретов, cookies, токенов, локальных БД, runtime, моделей и venv.
+- Создан локальный Git repo, ветка main.
+- Первый commit: 05361ee (init-bridge-spec).
+- Создан public GitHub repository: https://github.com/lcannabinol/Windows-Agent-Hub.
+- Первый push выполнен; README проверен чтением с GitHub.
 
 ## Не выполнено
-- Git init и первый commit.
-- Создание удалённого GitHub repository.
-- Выбор MCP SDK.
+- Выбор MCP SDK и транспорта.
 - Реализация MCP proxy.
 - Повторная проверка всех MCP-конфигураций и Python окружений.
+- Проверка Playwright/CDP и Ui.Vision browser extension.
+- Реализация интеграций с upstream.
+- Web UI и Android UI.
 
-## Текущие факты
-- Старый worktree: D:\mAgIcmd\github_worktree, ветка work/architecture-plan.
-- В старом worktree есть незакоммиченные плановые документы и заготовки API provider adapters.
-- Remote Desktop Commander сейчас Online.
-- GitHub CLI gh не установлен.
-- GitHub connector в текущем сеансе не предоставляет create repository.
-- В старом репозитории не выполнялись commit/push.
+## Существующий проект не затронут
+D:\mAgIcmd\github_worktree остаётся отдельной рабочей копией старого mAgIcmd, ветка work/architecture-plan. Незакоммиченные плановые документы и provider adapters там не менялись и не переносились.
 
-## Следующий шаг
-Проверить новый каркас, инициализировать локальный Git и создать первый commit. Удалённый public repository создать отдельной операцией. Не смешивать новую архитектуру с прежними экспериментальными provider adapters.
+## Ограничения
+- Новые файлы, SDK, окружения и кэши — на D:.
+- Никаких обязательных платных API.
+- Не читать и не коммитить секреты.
+- Не менять существующие MCP-конфиги без отдельного согласования.
+- HUB не получает собственный агентный цикл.
